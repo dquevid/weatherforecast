@@ -29,7 +29,7 @@ function buttonClicked() {
                 day[i].style.animation = "change .5s cubic-bezier(0, .70, .30, 1)";
 
                 temp.textContent = Math.floor(data['list'][i]['main']['temp']) - 273 + "°";
-                date.textContent = dateValue.getDate() + " " + dateValue.toLocaleString('ru-ru', {month: 'short'});
+                date.textContent = dateValue.getDate() + " " + dateValue.toLocaleString('default', {month: 'short'});
                 desc.textContent = data['list'][i]['weather'][0]['description'];
                 icon.setAttribute("Src", "http://openweathermap.org/img/wn/" + data['list'][i]['weather'][0]['icon'] + "@2x.png");
                 setTimeout('day[i].removeAttribute("style")', 500);
