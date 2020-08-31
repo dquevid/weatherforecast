@@ -7,7 +7,7 @@ let i = 1;
 
 function buttonClicked() {
     if (city.value == "") {
-        error.textContent = "Please enter your city before click the button.";
+        error.textContent = "Пожалуйста, введите название города прежде чем нажать на кнопку.";
         error.style.display = "block";
         error.style.animation = "emergence .5s cubic-bezier(0, .50, .50, 1)";
         error.style.opacity = 1;
@@ -29,7 +29,7 @@ function buttonClicked() {
                 day[i].style.animation = "change .5s cubic-bezier(0, .70, .30, 1)";
 
                 temp.textContent = Math.floor(data['list'][i]['main']['temp']) - 273 + "°";
-                date.textContent = dateValue.getDate() + " " + dateValue.toLocaleString('en-us', {month: 'short'});
+                date.textContent = dateValue.getDate() + " " + dateValue.toLocaleString('ru-ru', {month: 'short'});
                 desc.textContent = data['list'][i]['weather'][0]['description'];
                 icon.setAttribute("Src", "http://openweathermap.org/img/wn/" + data['list'][i]['weather'][0]['icon'] + "@2x.png");
                 setTimeout('day[i].removeAttribute("style")', 500);
@@ -39,7 +39,7 @@ function buttonClicked() {
             setTimeout('error.style.display = "none"', 500);
             })
         .catch(err => {
-            error.textContent = "You entered the wrong city!";
+            error.textContent = "Вы ввели неправильное название города!";
             error.style.display = "block";
             error.style.animation = "emergence .5s cubic-bezier(0, .50, .50, 1)";
             error.style.opacity = 1;
