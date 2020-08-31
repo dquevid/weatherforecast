@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,300;1,600&display=swap');
+
+:root {
+    --WHITE: #FFF;
+    --BLACK: #000;
+    --LIGHT_GRAY: #777;
+    --DARK_GRAY: #333;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+
+body {
+    background: linear-gradient(45deg, #006cff, #9379ff, #4effd6);
+    background-size: 500% 1000%;
+
+    animation: body_ga 10s ease infinite;
+}
+
+@keyframes body_ga {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.header {
+    padding-top: .5em;
+    background: #333;
+    font-size: 3vw;
+    color: var(--LIGHT_GRAY);
+
+    transition: all .1s;
+}
+
+.header:hover {
+    padding: .5em 0;
+}
+
+.header:hover  .menu {
+    opacity: 1;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+/*    position: relative;*/
+    top: 4vh;
+    opacity: 0;
+
+    transition: all .2s;
+}
+
+.menu li a, p {
+    color: var(--LIGHT_GRAY);
+    font-size: 25px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.city {
+    margin: 2vh 0;
+    padding: 1em 2em;
+    width: 100%;
+    border-radius: 100vh;
+    border: 2px solid rgba(0,0,0,0);
+    text-align: left;
+
+    transition: all .2s;
+}
+
+ .city:focus {
+    border: 2px solid #3b3b5b;
+    color: var(--BLACK);
+}
+
+.error {
+    background: rgba(255, 177, 0, 0.5);
+    color: #FFF;
+    margin-bottom: 2vh;
+    padding: 1em;
+    border-radius: .5em;
+    display: none;
+    font-weight: 700;
+}
+
+@keyframes emergence {
+    0% {
+        opacity: 0;
+        margin-top: -60px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+
+@keyframes disappearance {
+    0% {
+        opacity: 1;
+        margin-top: 0;
+    }
+
+    100% {
+        opacity: 0;
+        margin-top: -60px;
+    }
+}
+
+.button {
+    padding: .7em .7em;
+    width: 100%;
+    border: none;
+    border-radius: .8em;
+    background: linear-gradient(to right, #F600FF, #0078FF);
+    background-size: 100% 100%;
+    color: var(--WHITE);
+    font-weight: 700;
+    font-size: 20px;
+
+    transition: all .5s;
+}
+
+.button:hover {
+    background: linear-gradient(45deg, #F600FF, #FF7979, #0078FF);
+    background-size: 500% 500%;
+
+    animation: button_ga 8s ease infinite;
+}
+
+@keyframes button_ga{
+    0% {
+        background-position: 0 50%:
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.button:active {
+    background: var(--BLACK);
+    border-radius: 0;
+}
+
+.weather {
+    margin: 3em 0;
+}
+
+@keyframes change {
+    0% {
+        margin-top: 0px;
+    }
+
+    50% {
+        margin-top: 50px;
+        opacity: 0;
+    }
+
+    51% {
+        margin-top: -50px;
+    }
+
+    100% {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
+.forecast {
+    display: flex;
+    justify-content: space-between;
+}
+
+.day {
+    width: 15vw;
+    height: 13em;
+    padding: .3em;
+    background: var(--DARK_GRAY);
+    border-radius: .8em;
+    color: var(--WHITE);
+    animation: none;
+    word-wrap: break-word;
+}
