@@ -22,7 +22,7 @@ function buttonClicked() {
                 let day = document.querySelectorAll(".day");
                 let date = day[i].querySelector(".date");
                 let temp = day[i].querySelector(".temp");
-                let desc = day[i].querySelector(".weather_desc");
+                let desc = day[i].querySelector(".desc");
                 let icon = day[i].querySelector(".icon");
                 let dateValue = new Date(data['list'][i*8]['dt_txt']);
 
