@@ -3,7 +3,7 @@
 :root {
     --WHITE: #FFF;
     --BLACK: #000;
-    --LIGHT_GRAY: #777;
+    --LIGHT_GRAY: #eee;
     --DARK_GRAY: #333;
     --DARK_VIOLET: #3b3b5b;
 }
@@ -202,12 +202,24 @@ body {
 .day {
     width: 15vw;
     height: 13em;
-    padding: .3em;
+    padding: 2vw;
     background: var(--DARK_GRAY);
-    border-radius: .8em;
-    color: var(--WHITE);
+    border-radius: 1vw;
+    color: var(--LIGHT_GRAY);
     animation: none;
     word-wrap: break-word;
+
+    transition: .2s;
+}
+
+.day:hover {
+    transform: scale(1.07);
+}
+
+.icon {
+    width: 5vw;
+    height: 5vw;
+    margin-bottom: 20px;
 }
 
 @media screen and (max-device-width: 600px) {
@@ -236,19 +248,34 @@ body {
         font-size: 30px;
     }
 
+    .forecast {
+        display: block;
+    }
+
     .day {
         height: 17em;
+        width: 90%;
+        display: flex;
+        margin: 20px auto;
+        border-radius: 3vw;
+        justify-content: space-around;
+    }
+
+    .icon {
+        width: 20vw;
+        height: 20vw;
+        margin: 0;
     }
 
     .temp {
-        font-size: 40px;
+        font-size: 100px;
     }
 
     .date {
-        font-size: 28px;
+        font-size: 35px;
     }
 
     .desc {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
