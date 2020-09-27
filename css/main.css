@@ -3,6 +3,7 @@
 :root {
     --WHITE: #FFF;
     --BLACK: #000;
+    --GRAY: ##43545D;
     --LIGHT_GRAY: #eee;
     --DARK_GRAY: #333;
     --DARK_VIOLET: #3b3b5b;
@@ -203,7 +204,7 @@ body {
     width: 15vw;
     height: 13em;
     padding: 2vw;
-    background: var(--DARK_GRAY);
+    background: ##1f314850;
     border-radius: 1vw;
     color: var(--LIGHT_GRAY);
     animation: none;
