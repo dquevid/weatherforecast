@@ -1,2 +1,2 @@
 # weatherforecast
-This is a Web-Program, that show you weather, with good design!(nooo)
+This is a Web-App, that show you weather, with good design!(nooo)
